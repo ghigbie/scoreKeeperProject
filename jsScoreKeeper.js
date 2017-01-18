@@ -65,7 +65,6 @@ buttonR.addEventListener("click", function(){
 function player1Wins(){
 	alert("Player One Wins");
 	setInterval(function(){
-		//make background flash to playerone color
 		body.classList.toggle("bodyOne");
 	}, 500);
 }
@@ -73,7 +72,6 @@ function player1Wins(){
 function player2Wins(){
 	alert("Palyer Two Wins")
 	setInterval(function(){
-		//make background flash to playertwo color
 		body.classList.toggle("bodyTwo");
 	}, 500);
 }
