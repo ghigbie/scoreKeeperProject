@@ -1,22 +1,30 @@
 /*This file was created in the command line*/
 body{
-	background: #632bf2;
+	background: #99b0c9;
 }
+
+#input{
+	background-color: #ccffff;
+}
+
 
 #playerOne{
 	background-color: #f2a22b;
-	border: 2px solid #1d3e72; 
 	border-radius: 12px;
+	margin: 1px;
+	font-weight: 700;
 }
 
 #playerTwo{
 	background-color: #2b7bf2;
-	border: 2px solid #1d3e72;
 	border-radius: 12px;
+	margin: 1px;
+ 	font-weight: 700;
 }
 
 #reset{
-	ackground-color: #2b7bf2;
-	border: 2px solid #1d3e72;
+	background-color: #ce8bed;
 	border-radius: 12px;
+	margin: 1px;
+	font-weight: 700;
 }
