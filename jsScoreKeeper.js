@@ -64,13 +64,15 @@ buttonR.addEventListener("click", function(){
 
 function player1Wins(){
 	alert("Player One Wins");
+	score1.style.color = "green";
 	setInterval(function(){
 		body.classList.toggle("bodyOne");
 	}, 500);
 }
 
 function player2Wins(){
-	alert("Palyer Two Wins")
+	alert("Palyer Two Wins");
+	score2.style.color = "green";
 	setInterval(function(){
 		body.classList.toggle("bodyTwo");
 	}, 500);
