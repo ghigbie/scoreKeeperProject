@@ -18,21 +18,27 @@ var body = document.querySelector("body");
 
 
 button1.addEventListener("click", function(){
-	if(player1Score <= maxScore){
+	if(!gameOver){
 		player1Score++;
 		console.log(player1Score);
-		score1.textContent = player1Score;
-		checkWin();
+		if(player1Score === maxScore){
+			gameOver = true;
+		}
 	}
+	score1.textContent = player1Score;
+	checkWin();
 });
 
 button2.addEventListener("click", function(){
-	if(player2Score <= maxScore){
-		player2Score++;
+	if(gameOver){
+		player2Socre++;
 		console.log(player2Score);
-		score2.textContent = player2Score;
-		checkWin();
+		if(player2Score === maxScore){
+			gameOver = true;
+		}
 	}
+	score2.textContent = player2Score;
+	checkWin();
 });
 
 buttonR.addEventListener("click", function(){
