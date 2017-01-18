@@ -51,11 +51,10 @@ buttonR.addEventListener("click", function(){
 	score2.textContent = player2Score;
 	gameOver = false;
 	body.className= "";
-	score1.className = "";
-	score2.className = "";
+	score1.classList.remove("win");
+	score2.classList.remove("win");
 	clearInterval(setIntervalId);
 	console.log("reset button clicked");
-
 });
 
 // function checkWin(){
