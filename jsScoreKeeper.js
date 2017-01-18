@@ -8,7 +8,7 @@ var hasWon = false;
 
 
 var button1 = document.querySelector("#playerOne");
-var button2 = document.querySelector("#playerTwo");
+var button2 = document.getElementById("playerTwo");
 var buttonR = document.querySelector("button")[2];
 var score1 = document.querySelector("#score1");
 var score2 = document.querySelector("#score2");
