@@ -5,11 +5,12 @@ var maxScore = 5;
 var player1Score = 0;
 var player2Score = 0;
 var gameOver = false;
+var winner = "";
 
 
 var button1 = document.querySelector("#playerOne");
 var button2 = document.getElementById("playerTwo");
-var buttonR = document.querySelector("button")[2];
+var buttonR = document.querySelector("#reset");
 var score1 = document.querySelector("#score1");
 var score2 = document.querySelector("#score2");
 var maxScoreDisplay = document.getElementById("maxScore");
@@ -67,17 +68,26 @@ buttonR.addEventListener("click", function(){
 
 function player1Wins(){
 	alert("Player One Wins");
+	winner = "player1";
 	score1.style.color = "green";
-	setInterval(function(){
-		body.classList.toggle("bodyOne");
-	}, 500);
+	flashScreen();
 }
 
 function player2Wins(){
 	alert("Palyer Two Wins");
+	winner = "player2";
 	score2.style.color = "green";
-	setInterval(function(){
-		body.classList.toggle("bodyTwo");
+	flashScreen();
+}
+
+function flashScreen(){
+	setInterval(funciton(){
+		if(winner === "player1"){
+			body.classList.toggle("bodyOne");
+		}
+		else{
+			body.classList.toggle("bodyTwo");
+		}
 	}, 500);
 }
 
