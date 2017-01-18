@@ -30,6 +30,12 @@ button2.addEventListener("click", function(){
 	}
 });
 
+buttonR.addEventListener("click", function(){
+	player1Score = 0;
+	player2Score = 0;
+	body.classList.remove("bodyOne", "BodyTwo");
+});
+
 function checkWin(){
 	if(player1Score = maxScore){
 		player1Wins();
@@ -44,7 +50,7 @@ function player1Wins(){
 	alert("Player One Wins");
 	setInterval(function(){
 		//make background flash to playerone color
-
+		body.classList.toggle("bodyOne");
 	}, 200);
 }
 
@@ -52,6 +58,7 @@ function player2Wins(){
 	alert("Palyer Two Wins")
 	setInterval(function(){
 		//make background flash to playertwo color
+		body.classList.toggle("bodyTwo");
 	}, 200);
 }
 
