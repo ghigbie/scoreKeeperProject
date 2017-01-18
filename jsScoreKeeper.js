@@ -33,7 +33,7 @@ button1.addEventListener("click", function(){
 
 button2.addEventListener("click", function(){
 	if(!gameOver){
-		player2Socre++;
+		player2Score++;
 		console.log(player2Score);
 		score2.textContent = player2Score;
 		if(player2Score === maxScore){
