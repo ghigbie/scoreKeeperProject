@@ -1,7 +1,7 @@
 //this file was created in the command line
 //alert("JS file is connected");
 
-var maxScore = 0;
+var maxScore = 5;
 var player1Score = 0;
 var player2Score = 0;
 var hasWon = false;
@@ -14,19 +14,25 @@ var score1 = document.querySelector("#score1");
 var score2 = document.querySelector("#score2");
 
 button1.addEventListener("click", function(){
-	score1.textContent = playerOne++;
-	checkWin();
+	if(player1Score <= maxScore){
+		score1.textContent = playerOne++;
+		checkWin();
+	}
 });
 
 button2.addEventListener("click", function(){
-	if(player)
-	score2.textContent = playerTwo++;
-	checkWin();
+	if(player2Score <= maxScore){
+		score2.textContent = playerTwo++;
+		checkWin();
+	}
 });
 
 function checkWin(){
-	if(player1Score > player2Score){
-		player1Wins = true;
+	if(player1Score = maxScore){
+		player1Wins();
+	}
+	if(player2Score = maxScore){
+		player2Wins();
 	}
 
 }
