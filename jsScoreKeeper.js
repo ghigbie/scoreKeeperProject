@@ -32,7 +32,7 @@ button1.addEventListener("click", function(){
 });
 
 button2.addEventListener("click", function(){
-	if(gameOver){
+	if(!gameOver){
 		player2Socre++;
 		console.log(player2Score);
 		score2.textContent = player2Score;
@@ -50,10 +50,12 @@ buttonR.addEventListener("click", function(){
 	score1.textContent = player1Score;
 	score2.textContent = player2Score;
 	gameOver = false;
-	body.className="";
-	score1.classList.remove("win");
-	score2.classList.remove("win");
+	body.className= "";
+	score1.className = "";
+	score2.className = "";
+	clearInterval(setIntervalId);
 	console.log("reset button clicked");
+
 });
 
 // function checkWin(){
@@ -82,14 +84,15 @@ function player2Wins(){
 }
 
 function flashScreen(){
-	setIntervalId = setInterval(funciton(){
+	setIntervalId = setInterval(function(){
 		if(winner === "player1"){
 			body.classList.toggle("bodyOne");
 		}
 		else{
 			body.classList.toggle("bodyTwo");
 		}
-	}, 500)
+	}, 500);
+
 }
 
 
