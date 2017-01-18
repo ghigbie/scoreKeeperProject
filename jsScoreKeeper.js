@@ -18,14 +18,14 @@ var body = document.querySelector("body");
 
 button1.addEventListener("click", function(){
 	if(player1Score <= maxScore){
-		score1.textContent = playerOne++;
+		score1.textContent = playe1Score++;
 		checkWin();
 	}
 });
 
 button2.addEventListener("click", function(){
 	if(player2Score <= maxScore){
-		score2.textContent = playerTwo++;
+		score2.textContent = player2Score++;
 		checkWin();
 	}
 });
@@ -37,10 +37,11 @@ buttonR.addEventListener("click", function(){
 });
 
 function checkWin(){
-	if(player1Score = maxScore){
+	if(player1Score === maxScore){
 		player1Wins();
 	}
-	if(player2Score = maxScore){
+
+	if(player2Score === maxScore){
 		player2Wins();
 	}
 
@@ -51,7 +52,7 @@ function player1Wins(){
 	setInterval(function(){
 		//make background flash to playerone color
 		body.classList.toggle("bodyOne");
-	}, 200);
+	}, 500);
 }
 
 function player2Wins(){
@@ -59,7 +60,7 @@ function player2Wins(){
 	setInterval(function(){
 		//make background flash to playertwo color
 		body.classList.toggle("bodyTwo");
-	}, 200);
+	}, 500);
 }
 
 
