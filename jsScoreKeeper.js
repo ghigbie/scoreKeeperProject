@@ -20,7 +20,7 @@ button1.addEventListener("click", function(){
 	if(player1Score <= maxScore){
 		player1Score++;
 		console.log(player1Score);
-		//score1.textContent = playe1Score;
+		score1.textContent = player1Score;
 		checkWin();
 	}
 });
@@ -29,7 +29,7 @@ button2.addEventListener("click", function(){
 	if(player2Score <= maxScore){
 		player2Score++;
 		console.log(player2Score);
-		//score2.textContent = player2Score;
+		score2.textContent = player2Score;
 		checkWin();
 	}
 });
@@ -37,6 +37,8 @@ button2.addEventListener("click", function(){
 buttonR.addEventListener("click", function(){
 	player1Score = 0;
 	player2Score = 0;
+	score1.textContent = player1Score;
+	score2.textContent = player2Score;
 	body.classList.remove("bodyOne", "BodyTwo");
 });
 
