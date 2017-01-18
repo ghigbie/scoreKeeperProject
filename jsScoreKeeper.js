@@ -12,6 +12,7 @@ var button2 = document.getElementById("playerTwo");
 var buttonR = document.querySelector("button")[2];
 var score1 = document.querySelector("#score1");
 var score2 = document.querySelector("#score2");
+var maxScoreDisplay = document.getElementById("maxScore")
 var body = document.querySelector("body");
 
 
