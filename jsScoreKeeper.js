@@ -6,6 +6,7 @@ var player1Score = 0;
 var player2Score = 0;
 var gameOver = false;
 var winner = "";
+var intervalId;
 
 
 var button1 = document.querySelector("#playerOne");
@@ -81,14 +82,14 @@ function player2Wins(){
 }
 
 function flashScreen(){
-	setInterval(funciton(){
+	setIntervalId = setInterval(funciton(){
 		if(winner === "player1"){
 			body.classList.toggle("bodyOne");
 		}
 		else{
 			body.classList.toggle("bodyTwo");
 		}
-	}, 500);
+	}, 500)
 }
 
 
