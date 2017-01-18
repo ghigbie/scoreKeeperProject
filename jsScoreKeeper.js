@@ -4,7 +4,7 @@
 var maxScore = 5;
 var player1Score = 0;
 var player2Score = 0;
-var hasWon = false;
+var gameOver = false;
 
 
 var button1 = document.querySelector("#playerOne");
@@ -40,6 +40,7 @@ buttonR.addEventListener("click", function(){
 	player2Score = 0;
 	score1.textContent = player1Score;
 	score2.textContent = player2Score;
+	gameOver = false;
 	body.classList.remove("bodyOne", "BodyTwo");
 });
 
