@@ -21,24 +21,25 @@ button1.addEventListener("click", function(){
 	if(!gameOver){
 		player1Score++;
 		console.log(player1Score);
+		score1.textContent = player1Score;
 		if(player1Score === maxScore){
 			gameOver = true;
+			player1Wins();
 		}
 	}
-	score1.textContent = player1Score;
-	checkWin();
 });
 
 button2.addEventListener("click", function(){
 	if(gameOver){
 		player2Socre++;
 		console.log(player2Score);
+		score2.textContent = player2Score;
 		if(player2Score === maxScore){
 			gameOver = true;
+			player2Wins();
+
 		}
 	}
-	score2.textContent = player2Score;
-	checkWin();
 });
 
 buttonR.addEventListener("click", function(){
@@ -50,16 +51,16 @@ buttonR.addEventListener("click", function(){
 	body.classList.remove("bodyOne", "BodyTwo");
 });
 
-function checkWin(){
-	if(player1Score === maxScore){
-		player1Wins();
-	}
+// function checkWin(){
+// 	if(player1Score === maxScore){
+// 		player1Wins();
+// 	}
 
-	if(player2Score === maxScore){
-		player2Wins();
-	}
+// 	if(player2Score === maxScore){
+// 		player2Wins();
+// 	}
 
-}
+// }
 
 function player1Wins(){
 	alert("Player One Wins");
