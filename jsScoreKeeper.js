@@ -16,8 +16,13 @@ var score2 = document.querySelector("#score2");
 var maxScoreDisplay = document.getElementById("maxScore");
 var body = document.querySelector("body");
 
+
+checkForInput();
+
 function checkForInput(){
-	
+	if(numberInput !== ""){
+		maxScore = numberInput;
+	}
 }
 
 button1.addEventListener("click", function(){
