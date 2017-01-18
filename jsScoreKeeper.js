@@ -72,14 +72,14 @@ buttonR.addEventListener("click", function(){
 function player1Wins(){
 	alert("Player One Wins");
 	winner = "player1";
-	score1.style.color = "green";
+	score1.classList.add("win");
 	flashScreen();
 }
 
 function player2Wins(){
 	alert("Palyer Two Wins");
 	winner = "player2";
-	score2.style.color = "green";
+	score2.classList.add("win");
 	flashScreen();
 }
 
