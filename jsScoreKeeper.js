@@ -12,6 +12,9 @@ var button2 = document.querySelector("#playerTwo");
 var buttonR = document.querySelector("button")[2];
 var score1 = document.querySelector("#score1");
 var score2 = document.querySelector("#score2");
+var body = document.querySelector("body");
+
+
 
 button1.addEventListener("click", function(){
 	if(player1Score <= maxScore){
@@ -41,6 +44,7 @@ function player1Wins(){
 	alert("Player One Wins");
 	setInterval(function(){
 		//make background flash to playerone color
+
 	}, 200);
 }
 
