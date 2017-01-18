@@ -18,14 +18,16 @@ var body = document.querySelector("body");
 
 button1.addEventListener("click", function(){
 	if(player1Score <= maxScore){
-		score1.textContent = playe1Score++;
+		player1Score++;
+		//score1.textContent = playe1Score;
 		checkWin();
 	}
 });
 
 button2.addEventListener("click", function(){
 	if(player2Score <= maxScore){
-		score2.textContent = player2Score++;
+		player2Score++;
+		//score2.textContent = player2Score;
 		checkWin();
 	}
 });
