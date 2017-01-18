@@ -48,7 +48,10 @@ buttonR.addEventListener("click", function(){
 	score1.textContent = player1Score;
 	score2.textContent = player2Score;
 	gameOver = false;
-	body.classList.remove("bodyOne", "BodyTwo");
+	body.className="";
+	score1.classList.remove("win");
+	score2.classList.remove("win");
+	console.log("reset button clicked");
 });
 
 // function checkWin(){
