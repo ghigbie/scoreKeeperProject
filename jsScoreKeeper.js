@@ -13,7 +13,7 @@ var button2 = document.getElementById("playerTwo");
 var buttonR = document.querySelector("#reset");
 var score1 = document.querySelector("#score1");
 var score2 = document.querySelector("#score2");
-var maxScoreDisplay = document.getElementById("maxScore");
+var winnerScoreDisplay = document.querySelector("#maxScore");
 var body = document.querySelector("body");
 
 
@@ -63,7 +63,8 @@ buttonR.addEventListener("click", function(){
 });
 
 numberInput.addEventListener("change", function(){
-	alert("Clicked the input");
+	winnerScoreDisplay.textContent = numberInput.value;
+	maxScore = numberInput.value;
 });
 
 // function checkWin(){
