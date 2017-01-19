@@ -7,7 +7,7 @@ var player2Score = 0;
 var gameOver = false;
 var winner = "";
 var intervalId;
-var numberInput = document.querySelector("input[type='number']");
+var numberInput = document.querySelector("input");
 var button1 = document.querySelector("#playerOne");
 var button2 = document.getElementById("playerTwo");
 var buttonR = document.querySelector("#reset");
@@ -20,12 +20,13 @@ var body = document.querySelector("body");
 checkForInput();
 
 function checkForInput(){
-	if(numberInput !== ""){
+	if(numberInput > 0){
 		maxScore = numberInput;
-	}
+	} //no else statment needed because the maxScore is already set to 5
 }
 
 button1.addEventListener("click", function(){
+	checkForInput();
 	if(!gameOver){
 		player1Score++;
 		console.log(player1Score);
@@ -38,6 +39,7 @@ button1.addEventListener("click", function(){
 });
 
 button2.addEventListener("click", function(){
+	checkForInput();
 	if(!gameOver){
 		player2Score++;
 		console.log(player2Score);
