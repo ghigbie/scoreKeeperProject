@@ -17,16 +17,15 @@ var maxScoreDisplay = document.getElementById("maxScore");
 var body = document.querySelector("body");
 
 
-checkForInput();
+// checkForInput();
 
-function checkForInput(){
-	if(numberInput > 0){
-		maxScore = numberInput;
-	} //no else statment needed because the maxScore is already set to 5
-}
+// function checkForInput(){
+// 	if(numberInput > 0){
+// 		maxScore = numberInput;
+// 	} //no else statment needed because the maxScore is already set to 5
+// }
 
 button1.addEventListener("click", function(){
-	checkForInput();
 	if(!gameOver){
 		player1Score++;
 		console.log(player1Score);
@@ -39,7 +38,6 @@ button1.addEventListener("click", function(){
 });
 
 button2.addEventListener("click", function(){
-	checkForInput();
 	if(!gameOver){
 		player2Score++;
 		console.log(player2Score);
@@ -62,6 +60,10 @@ buttonR.addEventListener("click", function(){
 	score2.classList.remove("win");
 	clearInterval(setIntervalId);
 	console.log("reset button clicked");
+});
+
+numberInput.addEventListener("click", function(){
+	alert("Clicked the input");
 });
 
 // function checkWin(){
