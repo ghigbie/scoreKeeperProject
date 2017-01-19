@@ -62,7 +62,7 @@ buttonR.addEventListener("click", function(){
 	console.log("reset button clicked");
 });
 
-numberInput.addEventListener("click", function(){
+numberInput.addEventListener("change", function(){
 	alert("Clicked the input");
 });
 
