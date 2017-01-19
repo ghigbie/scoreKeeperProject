@@ -58,8 +58,8 @@ buttonR.addEventListener("click", function(){
 	body.className= "";
 	score1.classList.remove("win");
 	score2.classList.remove("win");
+	numberInput.value = "";
 	clearInterval(setIntervalId);
-	numberInput.reset();
 	console.log("reset button clicked");
 });
 
