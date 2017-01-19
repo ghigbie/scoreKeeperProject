@@ -59,12 +59,13 @@ buttonR.addEventListener("click", function(){
 	score1.classList.remove("win");
 	score2.classList.remove("win");
 	clearInterval(setIntervalId);
+	numberInput.reset();
 	console.log("reset button clicked");
 });
 
 numberInput.addEventListener("change", function(){
 	winnerScoreDisplay.textContent = numberInput.value;
-	maxScore = numberInput.value;
+	maxScore = parseInt(numberInput.value);
 });
 
 // function checkWin(){
