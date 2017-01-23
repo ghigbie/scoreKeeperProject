@@ -1,6 +1,3 @@
-//this file was created in the command line
-//alert("JS file is connected");
-
 var maxScore = 5;
 var player1Score = 0;
 var player2Score = 0;
@@ -17,13 +14,6 @@ var winnerScoreDisplay = document.querySelector("#maxScore");
 var body = document.querySelector("body");
 
 
-// checkForInput();
-
-// function checkForInput(){
-// 	if(numberInput > 0){
-// 		maxScore = numberInput;
-// 	} //no else statment needed because the maxScore is already set to 5
-// }
 
 button1.addEventListener("click", function(){
 	if(!gameOver){
@@ -68,16 +58,6 @@ numberInput.addEventListener("change", function(){
 	maxScore = parseInt(numberInput.value);
 });
 
-// function checkWin(){
-// 	if(player1Score === maxScore){
-// 		player1Wins();
-// 	}
-
-// 	if(player2Score === maxScore){
-// 		player2Wins();
-// 	}
-
-// }
 
 function player1Wins(){
 	alert("Player One Wins");
